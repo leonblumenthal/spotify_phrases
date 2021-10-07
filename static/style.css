@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0fff0;
+    display: grid;
+    margin: 4rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+form input {
+    font-size: 1.5rem;
+    width: 32rem;
+    border-radius: 4rem;
+    border: none;
+    padding: 0 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    height: 3.5rem;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form button {
+    border-radius: 4rem;
+    background-color: #1ed760;
+    border: none;
+    height: 3.5rem;
+    width: 3.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+form button i {
+    font-size: 1rem;
+    color: white;
+}
+
+.item-div {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 800px;
+}
+
+.item-img {
+    width: 96px;
+    height: 96px;
+}
+
+.text-div {
+    padding-left: 2rem;
+    justify-self: start;
+}
+
+.text-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+.text-subtitle {
+    margin: 0;
+    font-size: 0.8rem;
+}
+.text-subtitle span {
+    color: black;
+    font-weight: bold;
+}
+
+.link-div {
+    padding-right: 2rem;
+}
+
+.link-div a i {
+    color: #1ed760;
+    font-size: 2rem;
+}
+
+.no-tracks-div {
+    font-size: 1.5rem;
+}

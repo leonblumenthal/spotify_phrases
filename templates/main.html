@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Spotify Phrase</title>
+        <link
+            rel="stylesheet"
+            href="{{url_for('static', filename='style.css')}}"
+        />
+        <link
+            rel="shortcut icon"
+            href="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+        />
+        <script
+            src="https://kit.fontawesome.com/eae350f5fc.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <form method="get" action="http://127.0.0.1:5000/">
+            <input
+                type="text"
+                name="phrase"
+                placeholder="Enter phrase..."
+                autocomplete="off"
+                value="{{phrase}}"
+            />
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="list-div">
+            {% for track in tracks %}
+            <div class="item-div">
+                <img class="item-img" src="{{track.image_url}}" />
+                <div class="text-div">
+                    <h3 class="text-title">{{track.name}}</h3>
+                    <p class="text-subtitle">
+                        by <span>{{track.artists | join(', ')}}</span> in
+                        <span>{{track.album}}</span>
+                    </p>
+                </div>
+                <div class="link-div">
+                    <a href="{{track.open_url}}" target="_blank"
+                        ><i class="fab fa-spotify"></i
+                    ></a>
+                </div>
+            </div>
+            {% else %} {% if phrase%}
+            <p class="no-tracks-div">
+                No tracks found <i class="far fa-frown"></i>
+            </p>
+            {% endif%} {% endfor %}
+        </div>
+    </body>
+</html>
